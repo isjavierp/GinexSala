@@ -1,0 +1,13 @@
+---
+import {getSession} from "auth-astro/server"
+import Layout from "../layouts/Layout.astro"
+const session = await getSession(Astro.request)
+---
+
+
+
+<Layout title="Comprar Ticket">
+    <div class="w-full">
+        <h1 class="text-white text-xl">Bienvenido {session?.user?.name}</h1>
+    </div>
+</Layout>
